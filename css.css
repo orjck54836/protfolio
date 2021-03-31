@@ -108,7 +108,7 @@ html, body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 10vw;
+    margin-top: 40vw;
   }
 }
 
