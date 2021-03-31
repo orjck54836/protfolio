@@ -58,7 +58,7 @@ $('.portfolio').click(function(){
         $('#content2').html(
             '<a href="'+all[i].url+'" style="font-size:25px;color:#c31c1c;text-decoration: none">'+all[i].title+'</a><br><img src="'+all[i].img+'" width="80%" height="60%">'
         )
-        $('#content2').append('<div style="display:inline-block;margin-top:2vw;cursor: pointer"><i class="fas fa-arrow-circle-left" style="width:80px;font-size:50px"></i><i class="fas fa-arrow-circle-right" style="width:80px;font-size:50px"></i></div>')
+        $('#content2').append('<div style="display:inline-block;margin-top:2vw;cursor: pointer"><i class="fas fa-arrow-circle-left" style="width:80px;font-size:50px;color:white"></i><i class="fas fa-arrow-circle-right" style="width:80px;font-size:50px;color:white"></i></div>')
         
         $('.fa-arrow-circle-left').click(function(){
             $('.fa-arrow-circle-left').animate({right:'200px'},500)
