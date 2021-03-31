@@ -1,3 +1,16 @@
+
+
+@mixin breakpoint($point)
+  @if $point == pc
+    @media only screen and (max-width: 1024px)
+      @content 
+  @else if $point == pad 
+    @media only screen and (max-width: 768px)  
+      @content 
+  @else if $point == mobile 
+    @media only screen and (max-width: 479px)   
+      @content 
+
 =flex
     display: flex
     justify-content: center
@@ -24,6 +37,9 @@ html,body
     position: absolute
     top: 2vw
     +flex
+    @include breakpoint(mobile)
+        width: 100%
+
     .aboutme
         color: white
         height: 50px
@@ -55,24 +71,28 @@ html,body
     justify-content: center
     align-items: center
     width: 950px
-    height: 500px
     background-color: rgba(192,192,192,0.2 )
     position: absolute
     box-shadow: 0px 10px 80px rgba(white,0.5)
     border-radius: 10px
-    
+    @include breakpoint(mobile)
+        width: 100%
+        flex-direction: column
+        margin-top: 10vw
     .text
+        flex: 2
         color: white
         padding: 15px 
-    &::before 
-        content: ''
-        display: block
-        width: 180vw
-        background-image: url('./img/S__7373046.jpg')
-        background-position: center center
-        background-size: cover
-        height: 450px
-        margin-left: 2vw
+        @include breakpoint(mobile)
+            text-align: center
+           
+    img
+        flex: 1
+        width: 40%
+        margin: 2vw
+        height: 92%
+        @include breakpoint(mobile)
+            margin-top: 8vw
 
 #content2
     display: flex
@@ -87,3 +107,8 @@ html,body
     flex-direction: column
     text-decoration: none
     transition: 0.5s
+    @include breakpoint(mobile)
+        width: 100%
+
+
+          

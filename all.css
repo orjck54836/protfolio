@@ -37,6 +37,12 @@ html, body {
           align-items: center;
 }
 
+@media only screen and (max-width: 479px) {
+  #top {
+    width: 100%;
+  }
+}
+
 #top .aboutme {
   color: white;
   height: 50px;
@@ -88,7 +94,6 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   width: 950px;
-  height: 500px;
   background-color: rgba(192, 192, 192, 0.2);
   position: absolute;
   -webkit-box-shadow: 0px 10px 80px rgba(255, 255, 255, 0.5);
@@ -96,20 +101,44 @@ html, body {
   border-radius: 10px;
 }
 
+@media only screen and (max-width: 479px) {
+  #content1 {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 10vw;
+  }
+}
+
 #content1 .text {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   color: white;
   padding: 15px;
 }
 
-#content1::before {
-  content: '';
-  display: block;
-  width: 180vw;
-  background-image: url("./img/S__7373046.jpg");
-  background-position: center center;
-  background-size: cover;
-  height: 450px;
-  margin-left: 2vw;
+@media only screen and (max-width: 479px) {
+  #content1 .text {
+    text-align: center;
+  }
+}
+
+#content1 img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 40%;
+  margin: 2vw;
+  height: 92%;
+}
+
+@media only screen and (max-width: 479px) {
+  #content1 img {
+    margin-top: 8vw;
+  }
 }
 
 #content2 {
@@ -136,5 +165,11 @@ html, body {
   text-decoration: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media only screen and (max-width: 479px) {
+  #content2 {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=all.css.map */
